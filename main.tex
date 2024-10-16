@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+\author{Oganova Maria Romanovna, M3113 \\
+Zhuikov Artyom Sergeevich}
+\date{\today}
+\title{Work with LaTeX. Labwork №3}
+
+\begin{document}
+\maketitle
+
+\newpage
+\tableofcontents
+
+\newpage
+
+\section{General description of the library}
+Programs from the repository solve the following problems: calculate the perimeter and area of a circle and square.
+
+\section{Description of program files from the repository}
+
+\subsection{source code of the program and text description of the program logic  file circle.py} 
+
+\begin{minted}{python}
+
+import math
+
+
+def area(r):
+    return math.pi * r * r
+
+
+def perimeter(r):
+    return 2 * math.pi * r
+    
+\end{minted}
+\textit{Import math — The standard Python library for mathematical operations is imported.
+Area(r): This function takes one parameter r, which represents the radius of the circle. The function returns the area value.
+Perimeter(r):This function also takes one parameter, r, representing the radius of the circle.  The function returns the perimeter value. Thus, these two functions allow you to calculate the area and perimeter of a circle, knowing the radius r}
+ 
+\newpage
+\subsection{source code of the program and text description of the program logic file square.py}
+
+\begin{minted}{python}
+
+def area(a):
+    return a * a
+
+
+def perimeter(a):
+    return 4 * a
+    
+\end{minted}
+\textit{the functions area(a) and perimeter(a) allow you to calculate the area and perimeter of a square, knowing the length of its side a, and the expressions a * a and 4 * a implement formulas for calculating.}
+\subsection{visualization of the formula file docs}
+The docs file contains mathematical formulas for calculating the area and perimeter of a circle, a square and a rectangle, which are used in programs: \\
+
+\subsubsection{area}
+circle: $$S = \pi R^{2}$$
+square: $$S = a^{2}$$
+rectangle: $$S = ab$$
+\newpage
+\subsubsection{perimeter}
+circle: $$P = 2 \pi R$$
+square: $$P = 4a$$
+rectangle: $$P = 2a + 2b$$
+
+\label{subsec:pythagoras}
+
+\section{Links to the project on Overleaf or GitHub}
+\href{}{Github link} where you can view the source code of this document in LaTeX
+
+\end{document}
